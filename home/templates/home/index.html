@@ -1,0 +1,33 @@
+{% extends 'home/basic.html' %}
+{% block css %}
+body{
+    font-size:1em;
+}
+.catagory-button{
+     width:100%;
+     height: 100%;
+     background-color:white;
+}
+{% endblock %}
+{% block body %}
+<div style="width: 100%; height: 100%;">
+   <div style="width: 10%; height: 90%; border: 1px solid black; float: left;">
+    {% for memes,range,nSlides in all_meme%}
+    <div style="width: 100%; height: 3%; border: 1px solid black;">
+       <button class="catagory-button"> <h5 class="mx-4">{{memes.0.meme_catagory}}</h5></button>
+    </div>
+    {% endfor %}
+   </div>
+   <div class="my-2" style="width: 65%; height: 90%; border: 1px solid black; float: left;">
+        <div>
+            <h5>head</h5>
+            <p>Confused on which course to take? I have got you covered. Browse courses and find out the best course for you. Its free!
+Code With Harry is my attempt to teach basics and those coding techniques to people in short time which took me ages to learn.</p>
+        </div>
+   </div>
+   <div class="my-2" style="width: 25%; height: 90%; border: 1px solid black; float: left;">
+       <p> Confused on which course to take? I have got you covered. Browse courses and find out the best course for you. Its free!
+Code With Harry is my attempt to teach basics and those coding techniques to people in short time which took me ages to learn.</p>
+   </div>
+</div>
+{% endblock %}
